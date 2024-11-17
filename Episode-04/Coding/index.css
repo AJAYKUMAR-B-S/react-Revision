@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgb(0, 0, 0);
+}
+.main_Logo {
+  width: 120px;
+}
+.navContainer {
+  padding-right: 2rem;
+}
+
+.navContainerUL {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  font-size: 18px;
+}
