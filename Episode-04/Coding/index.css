@@ -61,9 +61,9 @@ body {
   transition: box-shadow 0.4s;
 }
 .restaurantCardContainer:hover {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+
 .restaurantCardIMG {
   width: 100%;
 }
@@ -71,7 +71,7 @@ body {
   display: grid;
   gap: 0.5rem;
   font-family: inherit;
-  padding: 0.5rem;
+  padding: 1rem;
 }
 .ratingAndDeliveryTimeContainer {
   display: flex;

@@ -1,6 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { RESTAURANT_MOCK_DATA } from "./restaurantMockData.js";
 
+// console.log(RESTAURANT_MOCK_DATA);
 /*
  ! Header
    * logo
@@ -39,25 +41,27 @@ const Header = () => {
   );
 };
 
-const RestaurantCard = () => {
+const RestaurantCard = (props) => {
+  const { name, avgRating, cloudinaryImageId, cuisines, sla } =
+    props.restaurantINFO;
+
   return (
     <div className="restaurantCardContainer">
       <div className="restaurantCardIMGContainer">
         <img
           className="restaurantCardIMG"
           alt="restaurantCardIMG"
-          src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/yeednzto1jusnnhswke0"
+          src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/${cloudinaryImageId}`}
         ></img>
       </div>
       <div className="restaurantCardINFOContainer">
-        <h3>RestaurantName</h3>
+        <h3>{name}</h3>
         <div className="ratingAndDeliveryTimeContainer">
-          <p>4.3</p>
-          <p>20 min</p>
+          <p>{avgRating}</p>
+          <p>{sla.slaString}</p>
         </div>
-        <p className="cuisines">
-          Biryani, Chinese, Indian, Kebabs, Tandoor Mehdipatnam
-        </p>
+        {console.log(cuisines.length)}
+        <p className="cuisines">{cuisines.join(", ")}</p>
       </div>
     </div>
   );
@@ -67,18 +71,12 @@ const Main = () => {
     <main className="mainContainer">
       <div className="searchContainer"></div>
       <div className="restaurantContainer">
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
+        {RESTAURANT_MOCK_DATA.card.card.gridElements.infoWithStyle.restaurants.map(
+          (data) => {
+            console.log();
+            return <RestaurantCard restaurantINFO={data.info} />;
+          }
+        )}
       </div>
     </main>
   );
