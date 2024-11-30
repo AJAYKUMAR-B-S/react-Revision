@@ -60,8 +60,12 @@ const RestaurantCard = (props) => {
           <p>{avgRating}</p>
           <p>{sla.slaString}</p>
         </div>
-        {console.log(cuisines.length)}
-        <p className="cuisines">{cuisines.join(", ")}</p>
+
+        <p className="cuisines">
+          {cuisines.length > 3
+            ? cuisines.slice(0, 4).join(",  ") + ",  ..."
+            : cuisines.join(", ")}
+        </p>
       </div>
     </div>
   );
@@ -69,11 +73,13 @@ const RestaurantCard = (props) => {
 const Main = () => {
   return (
     <main className="mainContainer">
-      <div className="searchContainer"></div>
+      <div className="searchContainer">
+        <input type="text" placeholder="search recipe"></input>
+        <button>search</button>
+      </div>
       <div className="restaurantContainer">
         {RESTAURANT_MOCK_DATA.card.card.gridElements.infoWithStyle.restaurants.map(
           (data) => {
-            console.log();
             return <RestaurantCard restaurantINFO={data.info} />;
           }
         )}
