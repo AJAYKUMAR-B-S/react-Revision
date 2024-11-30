@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Ubuntu", sans-serif;
+}
+/* ! Header Css Start From Here  */
+
+.Header {
+  display: flex;
+  padding: 0 4rem;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 10px 10px -10px rgba(11, 11, 11, 0.197);
+}
+.logoContainer {
+  border-radius: 50%;
+  overflow: hidden;
+}
+.main_Logo {
+  width: 105px;
+}
+
+.navContainerUL {
+  padding-right: 2rem;
+  display: flex;
+  list-style: none;
+  gap: 2.2rem;
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  font-family: inherit;
+  font-optical-sizing: auto;
+  font-weight: 500;
+}
+.navContainerUL li {
+  cursor: pointer;
+}
+
+/* ! Main Css Start From Here  */
+.mainContainer {
+  padding: 3rem 5rem;
+}
+.restaurantContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.restaurantCardContainer {
+  width: 15rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px,
+    rgba(17, 17, 26, 0.05) 0px 8px 32px;
+  cursor: pointer;
+  transition: box-shadow 0.4s;
+}
+.restaurantCardContainer:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.restaurantCardIMG {
+  width: 100%;
+}
+.restaurantCardINFOContainer {
+  display: grid;
+  gap: 0.5rem;
+  font-family: inherit;
+  padding: 1rem;
+}
+.ratingAndDeliveryTimeContainer {
+  display: flex;
+  gap: 1rem;
+}
