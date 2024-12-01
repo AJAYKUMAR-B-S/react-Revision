@@ -1,4 +1,4 @@
-export const RESTAURANT_MOCK_DATA = {
+const RESTAURANT_MOCK_DATA = {
   card: {
     card: {
       "@type": "type.googleapis.com/swiggy.gandalf.widgets.v2.GridWidget",
@@ -1734,5 +1734,4 @@ export const RESTAURANT_MOCK_DATA = {
   },
 };
 
-// export default RESTAURANT_MOCK_DATA.card.card.gridElements.infoWithStyle
-//   .restaurants;
+export default RESTAURANT_MOCK_DATA;
