@@ -5,12 +5,24 @@ const Main = () => {
     <main className="mainContainer">
       <div className="searchContainer">
         <input type="text" placeholder="search recipe"></input>
-        <button>search</button>
+        <button className="searchBTN">search</button>
+      </div>
+      <div className="filterContainer">
+        <button
+          className="topRatedBTN"
+          onClick={() => {
+            console.log("clicked");
+          }}
+        >
+          top rated
+        </button>
       </div>
       <div className="restaurantContainer">
         {RESTAURANT_MOCK_DATA.card.card.gridElements.infoWithStyle.restaurants.map(
           (data) => {
-            return <RestaurantCard restaurantINFO={data.info} />;
+            return (
+              <RestaurantCard key={data.info.id} restaurantINFO={data.info} />
+            );
           }
         )}
       </div>
